@@ -1,9 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 
-import MainPage from "./Pages/MainPage";
+import Video from "./Components/Global/Video";
+import Logo from "./Components/Global/Logo";
 
 function App() {
-  return <MainPage />;
+  return (
+    <>
+      <Logo />
+      <Video />
+    </>
+  );
 }
 
 export default App;

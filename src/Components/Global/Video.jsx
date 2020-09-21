@@ -8,7 +8,6 @@ function Video() {
       <video
         autoPlay="autoplay"
         muted="muted"
-        width="100%"
         playsInline="playsinline"
         loop="loop"
       >

@@ -1,6 +1,9 @@
 .logo-container {
-  margin-top: 20px;
-  margin-left: 20px;
+  position: absolute;
+  padding: 1.5rem;
+  z-index: 2;
+  background-color: black;
+  border-bottom: 3px solid #d71e24;
 }
 
 img {
