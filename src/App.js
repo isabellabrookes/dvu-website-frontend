@@ -13,7 +13,7 @@ function App() {
     <>
       <Logo />
       {/* <NavMenu /> */}
-      {/* <Router>
+      <Router>
         <Switch>
           <Route path="/aboutus">
             <AboutPage />
@@ -25,7 +25,7 @@ function App() {
             <MainPage />
           </Route>
         </Switch>
-      </Router> */}
+      </Router>
     </>
   );
 }
