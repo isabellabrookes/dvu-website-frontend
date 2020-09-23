@@ -1,0 +1,35 @@
+.menu {
+  position: absolute;
+  background-color: #c4c4c4;
+  width: 50%;
+  height: 100vh;
+  text-align: center;
+  padding-top: 1rem;
+  right: 0;
+  z-index: 2;
+}
+
+.transparent-overlay {
+  position: absolute;
+  background-color: black;
+  opacity: 0.5;
+  width: 50%;
+  left: 0;
+  height: 100vh;
+  z-index: 2;
+}
+
+.menu-item {
+  display: flex;
+  text-decoration: none;
+  color: #d71e24;
+  font-family: "Futura-Body";
+  margin-left: 3.125rem;
+  margin-right: 3.125rem;
+  text-align: center;
+  line-height: 2.5rem;
+}
+
+.menu-item:hover {
+  color: white;
+}

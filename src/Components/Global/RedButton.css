@@ -1,0 +1,11 @@
+.red-button {
+  background-color: #d71e24;
+  border-style: none;
+  color: white;
+  height: 2.5rem;
+  width: 6rem;
+  font-size: 1.2rem;
+  border-radius: 5%;
+  margin-top: 1rem;
+  font-family: "Futura-Body";
+}
