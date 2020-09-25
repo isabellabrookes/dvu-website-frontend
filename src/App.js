@@ -1,20 +1,21 @@
 import React from "react";
-
-import Logo from "./Components/Global/Logo";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-import NavMenu from "./Components/Global/NavMenu";
+import Navigation from "./Components/Global/Navigation";
 import MainPage from "./Pages/MainPage";
 import AboutPage from "./Pages/AboutPage";
 import SponsorsPage from "./Pages/SponsorsPage";
+import MediaPage from "./Pages/MediaPage";
 
 function App() {
   return (
     <>
-      <Logo />
-      {/* <NavMenu /> */}
       <Router>
+        <Navigation />
         <Switch>
+          <Route path="/media">
+            <MediaPage />
+          </Route>
           <Route path="/aboutus">
             <AboutPage />
           </Route>

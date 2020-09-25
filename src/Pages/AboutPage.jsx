@@ -1,11 +1,11 @@
 import React from "react";
 
-import "./AboutPage.css";
+import styles from "./AboutPage.module.css";
 
 function AboutPage() {
   return (
     <>
-      <section className="section section-one">
+      <section className={styles.section}>
         <img src="./assets/images/DubDriveDVUGroupPhoto.jpg" alt="" />
         <h5>IT STARTED WITH A VISION</h5>
         <p>

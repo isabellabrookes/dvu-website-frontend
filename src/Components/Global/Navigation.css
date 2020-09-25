@@ -1,0 +1,88 @@
+.logo-container {
+  position: absolute;
+  padding: 1.5rem;
+  z-index: 2;
+  background-color: black;
+  border-bottom: 3px solid #d71e24;
+}
+
+img {
+  width: 20%;
+}
+
+@media only screen and (max-width: 420px) {
+  img {
+    width: 50%;
+  }
+}
+
+.burger-menu {
+  position: absolute;
+  right: 0;
+  z-index: 2;
+  padding: 2rem;
+}
+
+button {
+  color: white;
+  background-color: transparent;
+  border: none;
+}
+
+.menu {
+  position: absolute;
+  background-color: #c4c4c4;
+  width: 50%;
+  height: 100vh;
+  text-align: center;
+  padding-top: 1rem;
+  right: 0;
+  z-index: 2;
+  animation-name: SlideInRight;
+  animation-fill-mode: forwards;
+  animation-duration: 0.5s;
+}
+
+.transparent-overlay {
+  position: absolute;
+  background-color: black;
+  opacity: 0.5;
+  width: 50%;
+  left: 0;
+  height: 100vh;
+  z-index: 2;
+}
+
+.menu-item {
+  display: flex;
+  text-decoration: none;
+  color: #d71e24;
+  font-family: "Futura-Body";
+  margin-left: 3.125rem;
+  margin-right: 3.125rem;
+  text-align: center;
+  line-height: 2.5rem;
+}
+
+.menu-item:hover {
+  color: white;
+}
+
+@keyframes SlideInRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes SlideOutRight {
+  from {
+    transform: translateX(0%);
+  }
+
+  to {
+    transform: translateX(100%);
+  }
+}
