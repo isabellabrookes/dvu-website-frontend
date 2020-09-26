@@ -5,14 +5,14 @@
   margin-left: auto;
   margin-right: auto;
 }
-.section img {
+.sponsorLogo {
   width: 40%;
   margin-left: auto;
   margin-right: auto;
   display: block;
 }
 
-.section p {
+.sponsorDescription {
   color: white;
   font-family: "Futura-Body";
   text-align: center;
@@ -20,7 +20,7 @@
   margin-right: 5%;
 }
 
-h5 {
+.pageTitle {
   color: white;
   font-family: "Futura-Header";
   text-align: center;

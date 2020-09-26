@@ -1,0 +1,36 @@
+{
+  "colors": [
+    "Black",
+    "Blue",
+    "White",
+    "Grey",
+    "Silver",
+    "Yellow",
+    "Red",
+    "Green",
+    "Purple",
+    "Brown",
+    "Violet"
+  ],
+  "models": [
+    "Golf GTI",
+    "Golf TSI",
+    "Golf GTI Clubsport",
+    "Golf R",
+    "Golf R32",
+    "Scirocco",
+    "Scirocco R",
+    "Touareg",
+    "Tiguan",
+    "Tiguan R Line",
+    "Passat",
+    "Passat R36",
+    "Arteon",
+    "Arteon R Line",
+    "EOS",
+    "CC",
+    "Beetle",
+    "Jetta",
+    "Termamont"
+  ]
+}

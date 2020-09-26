@@ -5,7 +5,7 @@ import styles from "./AboutPage.module.css";
 function AboutPage() {
   return (
     <>
-      <section className={styles.section}>
+      <section className={`${styles.section} ${styles.sectionOne}`}>
         <img src="./assets/images/DubDriveDVUGroupPhoto.jpg" alt="" />
         <h5>IT STARTED WITH A VISION</h5>
         <p>
@@ -21,7 +21,7 @@ function AboutPage() {
           club.
         </p>
       </section>
-      <section className="section section-two">
+      <section className={`${styles.section} ${styles.sectionTwo}`}>
         <h5>A to B</h5>
         <p>
           With over 200 active members, we are always holding events where
@@ -36,7 +36,7 @@ function AboutPage() {
         </p>
         <img src="./assets/images/3w_dubdrive.jpeg" alt="" />
       </section>
-      <section className="section section-three">
+      <section className={`${styles.section} ${styles.sectionThree}`}>
         <img src="./assets/images/circle.jpeg" alt="" />
         <h5>THE #CIRCLE</h5>
         <p>And that is why we call ourselves the #Circle.</p>

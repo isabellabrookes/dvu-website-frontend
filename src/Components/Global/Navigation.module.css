@@ -1,36 +1,40 @@
-.logo-container {
-  position: absolute;
+.logoContainer {
+  position: fixed;
   padding: 1.5rem;
   z-index: 2;
   background-color: black;
   border-bottom: 3px solid #d71e24;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 98px;
 }
 
-img {
+.dvuLogo {
   width: 20%;
 }
 
 @media only screen and (max-width: 420px) {
-  img {
+  .dvuLogo {
     width: 50%;
   }
 }
 
-.burger-menu {
-  position: absolute;
-  right: 0;
+.burgerMenu {
+  position: fixed;
+  right: 5%;
+  top: 5%;
   z-index: 2;
-  padding: 2rem;
 }
 
-button {
+.burgerMenuIcon {
   color: white;
   background-color: transparent;
   border: none;
 }
 
 .menu {
-  position: absolute;
+  position: fixed;
   background-color: #c4c4c4;
   width: 50%;
   height: 100vh;
@@ -38,12 +42,14 @@ button {
   padding-top: 1rem;
   right: 0;
   z-index: 2;
+  top: 0;
+  bottom: 0;
   animation-name: SlideInRight;
   animation-fill-mode: forwards;
   animation-duration: 0.5s;
 }
 
-.transparent-overlay {
+.transparentOverlay {
   position: absolute;
   background-color: black;
   opacity: 0.5;
@@ -53,7 +59,7 @@ button {
   z-index: 2;
 }
 
-.menu-item {
+.menuItem {
   display: flex;
   text-decoration: none;
   color: #d71e24;
@@ -64,7 +70,7 @@ button {
   line-height: 2.5rem;
 }
 
-.menu-item:hover {
+.menuItem:hover {
   color: white;
 }
 

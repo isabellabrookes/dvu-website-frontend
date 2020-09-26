@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-import "./Navigation.css";
+import style from "./Navigation.module.css";
 import RedButton from "./RedButton";
 
 function Navigation() {
@@ -11,33 +11,35 @@ function Navigation() {
   function DisplayMenu() {
     return (
       <>
-        <div className="menu">
-          <Link className="menu-item" to="/">
+        <div className={style.menu}>
+          <Link className={style.menuItem} to="/">
             HOME
           </Link>
-          <Link className="menu-item" to="/aboutus">
+          <Link className={style.menuItem} to="/aboutus">
             ABOUT US
           </Link>
-          <Link className="menu-item" to="/events">
+          <Link className={style.menuItem} to="/events">
             EVENTS
           </Link>
-          <Link className="menu-item" to="/sponsors">
+          <Link className={style.menuItem} to="/sponsors">
             SPONSORS
           </Link>
-          <Link className="menu-item" to="/media">
+          <Link className={style.menuItem} to="/media">
             MEDIA
           </Link>
-          <Link className="menu-item" to="/leaderboard">
+          <Link className={style.menuItem} to="/leaderboard">
             LEADERBOARD
           </Link>
-          <RedButton
-            text={isLoggedIn ? "Account" : "Log in"}
-            iconClassName="far fa-user"
-          ></RedButton>
+          <Link to="/login">
+            <RedButton
+              text={isLoggedIn ? "Account" : "Log in"}
+              iconClassName="far fa-user"
+            ></RedButton>
+          </Link>
         </div>
         <div
           onClick={() => setIsMenuOpen(false)}
-          className="transparent-overlay"
+          className={style.transparentOverlay}
         ></div>
       </>
     );
@@ -45,11 +47,18 @@ function Navigation() {
 
   return (
     <>
-      <div className="logo-container">
-        <img src="./assets/images/logo/dvu-logo.png" />
+      <div className={style.logoContainer}>
+        <img
+          className={style.dvuLogo}
+          src="./assets/images/logo/dvu-logo.png"
+        />
       </div>
-      <div className="burger-menu">
-        <button type="button" onClick={() => setIsMenuOpen(true)}>
+      <div className={style.burgerMenu}>
+        <button
+          className={style.burgerMenuIcon}
+          type="button"
+          onClick={() => setIsMenuOpen(true)}
+        >
           <i className="fas fa-bars fa-2x"></i>
         </button>
       </div>

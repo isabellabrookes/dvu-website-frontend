@@ -1,0 +1,47 @@
+.loginForm {
+  background-color: #343a40;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding-bottom: 5%;
+  border-radius: 3%;
+}
+
+/*
+ css trick. you can use the "adjacent sibling selector" to select all but the first. 
+ So you could do something like .inputField + .inputField { margin-top: 10px; } 
+ to select all non-first inputFields
+ jsonwebdev
+*/
+.inputField + .inputField {
+  margin-top: 10px;
+}
+
+.inputField {
+  display: block;
+  border-style: none;
+  border-radius: 3%;
+  font-size: 1rem;
+  padding: 5%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.pageTitle {
+  font-family: "Futura-Body";
+  color: white;
+  font-size: 1.5rem;
+  letter-spacing: 0.1rem;
+}
+
+.helpText {
+  font-family: "Futura-Body";
+  color: white;
+}
+
+.registerLink {
+  text-decoration: none;
+  font-family: "Futura-Body";
+  color: #d71e24;
+}

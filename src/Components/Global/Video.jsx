@@ -1,10 +1,10 @@
 import React from "react";
 
-import "./Video.css";
+import style from "./Video.module.css";
 
 function Video() {
   return (
-    <div className="video-container">
+    <div className={style.videoContainer}>
       <video
         autoPlay="autoplay"
         muted="muted"

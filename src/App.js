@@ -6,6 +6,8 @@ import MainPage from "./Pages/MainPage";
 import AboutPage from "./Pages/AboutPage";
 import SponsorsPage from "./Pages/SponsorsPage";
 import MediaPage from "./Pages/MediaPage";
+import LoginPage from "./Pages/LoginPage";
+import RegisterPage from "./Pages/RegisterPage";
 
 function App() {
   return (
@@ -13,6 +15,12 @@ function App() {
       <Router>
         <Navigation />
         <Switch>
+          <Route path="/register">
+            <RegisterPage />
+          </Route>
+          <Route path="/login">
+            <LoginPage />
+          </Route>
           <Route path="/media">
             <MediaPage />
           </Route>

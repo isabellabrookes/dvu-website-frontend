@@ -1,10 +1,10 @@
 import React from "react";
 
-import "./RedButton.css";
+import styles from "./RedButton.module.css";
 
 function RedButton(props) {
   return (
-    <button className="red-button" type="button">
+    <button className={styles.redButton} type="button">
       <i className={props.iconClassName}></i> {props.text}
     </button>
   );

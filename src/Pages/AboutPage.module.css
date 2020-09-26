@@ -35,19 +35,19 @@
   background-color: black;
 }
 
-.section-one h5,
-.section-three h5 {
+.sectionOne h5,
+.sectionThree h5 {
   border-color: #d71e24;
 }
 
-.section-one img {
+.sectionOne img {
   margin-top: 30%;
 }
 
-.section-two {
+.sectionTwo {
   background-color: #d71e24;
 }
 
-.section-three {
+.sectionThree {
   background-color: black;
 }
