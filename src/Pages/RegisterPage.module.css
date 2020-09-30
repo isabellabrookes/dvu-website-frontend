@@ -1,0 +1,14 @@
+.pageTitle {
+  font-family: "Futura-Body";
+  color: white;
+  font-size: 1.5rem;
+  letter-spacing: 0.1rem;
+  text-align: center;
+}
+
+.formContainer {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding-bottom: 5%;
+}

@@ -1,8 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
+import { useEffect } from "react";
+
+import style from "./DropDownField.module.css";
 
 const carProperty = require("../../Model/carProperty.json");
+const plateProperty = require("../../Model/plateProperty.json");
 
 function DropDownField(props) {
+  const [data, setData] = useState([]);
+
   const dateObject = new Date();
   const currentYear = dateObject.getFullYear();
   const carYear = [];
@@ -11,56 +17,64 @@ function DropDownField(props) {
     carYear.push(i);
   }
 
-  //   function range(startYear = 1937) {
-  //     const endYear = new Date().getFullYear() + 1;
-  //     const arraySize = endYear - startYear + 1;
-  //     return [...Array(arraySize).keys()].map((i) => i + startYear);
-  //   }
+  const handleFormChange = (e) => {
+    props.setFormData({
+      ...props.formData,
+      [props.keyName]: e.target.value,
+    });
+  };
 
-  if (props.name === "Car Year") {
-    return (
-      <select name={props.name} defaultValue={props.name}>
-        <option value={props.name} disabled selected hidden>
+  useEffect(() => {
+    switch (props.name) {
+      case "Car Model": {
+        setData(carProperty.models);
+        break;
+      }
+      case "Car Color": {
+        setData(carProperty.colors);
+        break;
+      }
+      case "Car Year": {
+        setData(carYear);
+        break;
+      }
+      case "Plate Emirate": {
+        setData(plateProperty.plateEmirate);
+        break;
+      }
+      case "Plate Code": {
+        if (props.formData.plateEmirate) {
+          setData(plateProperty.plateCode[props.formData.plateEmirate]);
+        }
+        break;
+      }
+      default: {
+        setData([]);
+        break;
+      }
+    }
+  }, [setData, props.formData]);
+
+  return (
+    <>
+      <select
+        className={style.dropDownFieldSelect}
+        name={props.name}
+        defaultValue={props.name}
+        onChange={(e) => handleFormChange(e)}
+        className={style.dropDownField}
+      >
+        <option defaultValue={props.name} disabled hidden>
           {props.name}
         </option>
-        {carYear.map((year) => (
-          <option key={year} value={year}>
-            {year}
+        {data.map((entry) => (
+          <option key={entry} value={entry}>
+            {entry}
           </option>
         ))}
       </select>
-    );
-  }
-
-  if (props.name === "Car Model") {
-    return (
-      <select name={props.name} defaultValue={props.name}>
-        <option value={props.name} disabled selected hidden>
-          {props.name}
-        </option>
-        {carProperty.models.map((model) => (
-          <option key={model} value={model}>
-            {model}
-          </option>
-        ))}
-      </select>
-    );
-  }
-
-  if (props.name === "Car Color") {
-    return (
-      <select name={props.name} defaultValue={props.name}>
-        <option value={props.name} disabled hidden>
-          {props.name}
-        </option>
-        {carProperty.colors.map((color) => (
-          <option key={color} value={color}>
-            {color}
-          </option>
-        ))}
-      </select>
-    );
-  }
+    </>
+  );
 }
 
 export default DropDownField;
