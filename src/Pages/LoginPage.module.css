@@ -8,6 +8,14 @@
   border-radius: 3%;
 }
 
+@media only screen and (min-width: 768px) {
+  .loginForm {
+    max-width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 /*
  css trick. you can use the "adjacent sibling selector" to select all but the first. 
  So you could do something like .inputField + .inputField { margin-top: 10px; } 

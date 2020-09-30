@@ -59,6 +59,15 @@
   z-index: 2;
 }
 
+@media only screen and (min-width: 768px) {
+  .menu {
+    width: 20%;
+  }
+  .transparentOverlay {
+    width: 80%;
+  }
+}
+
 .menuItem {
   display: flex;
   text-decoration: none;
