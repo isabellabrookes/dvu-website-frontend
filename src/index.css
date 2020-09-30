@@ -12,7 +12,8 @@ body {
   padding-top: 98px;
 }
 
-h1 {
+h1,
+h5 {
   margin: 0;
   color: white;
 }
