@@ -44,18 +44,34 @@
   z-index: 2;
   top: 0;
   bottom: 0;
+}
+
+.slideInRight {
   animation-name: SlideInRight;
   animation-fill-mode: forwards;
   animation-duration: 0.5s;
 }
 
-.transparentOverlay {
+.slideOutRight {
+  animation-name: SlideOutRight;
+  animation-fill-mode: forwards;
+  animation-duration: 0.5s;
+}
+
+.showTransparentOverlay {
   position: absolute;
   background-color: black;
   opacity: 0.5;
   width: 50%;
   left: 0;
   height: 100vh;
+  z-index: 2;
+}
+.hideTransparentOverlay {
+  position: absolute;
+  width: 0;
+  left: 0;
+  height: 0;
   z-index: 2;
 }
 

@@ -1,0 +1,13 @@
+.tableText {
+  color: white;
+  font-family: "Futura-Body";
+}
+
+.profilePicture {
+  width: 150px;
+  border-radius: 100%;
+}
+
+.icons {
+  color: #d71e24;
+}

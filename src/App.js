@@ -8,6 +8,7 @@ import SponsorsPage from "./Pages/SponsorsPage";
 import MediaPage from "./Pages/MediaPage";
 import LoginPage from "./Pages/LoginPage";
 import RegisterPage from "./Pages/RegisterPage";
+import ProfilePage from "./Pages/ProfilePage";
 
 function App() {
   return (
@@ -15,6 +16,9 @@ function App() {
       <Router>
         <Navigation />
         <Switch>
+          <Route path="/profile">
+            <ProfilePage />
+          </Route>
           <Route path="/register">
             <RegisterPage />
           </Route>

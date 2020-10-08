@@ -8,10 +8,15 @@ function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-  function DisplayMenu() {
+  function DisplayMenu(props) {
+    const animation = props.isOpen ? style.slideInRight : style.slideOutRight;
+    const overlay = props.isOpen
+      ? style.showTransparentOverlay
+      : style.hideTransparentOverlay;
+
     return (
       <>
-        <div className={style.menu}>
+        <div className={style.menu + " " + animation}>
           <Link className={style.menuItem} to="/">
             HOME
           </Link>
@@ -37,10 +42,7 @@ function Navigation() {
             ></RedButton>
           </Link>
         </div>
-        <div
-          onClick={() => setIsMenuOpen(false)}
-          className={style.transparentOverlay}
-        ></div>
+        <div onClick={() => setIsMenuOpen(false)} className={overlay}></div>
       </>
     );
   }
@@ -62,7 +64,7 @@ function Navigation() {
           <i className="fas fa-bars fa-2x"></i>
         </button>
       </div>
-      {isMenuOpen ? <DisplayMenu /> : null}
+      <DisplayMenu isOpen={isMenuOpen} />
     </>
   );
 }
