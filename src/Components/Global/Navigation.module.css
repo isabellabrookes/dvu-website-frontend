@@ -40,47 +40,48 @@
   height: 100vh;
   text-align: center;
   padding-top: 1rem;
-  right: 0;
+  right: -100%;
   z-index: 2;
   top: 0;
   bottom: 0;
 }
 
-.slideInRight {
+.slideIn {
+  right: 0;
   animation-name: SlideInRight;
   animation-fill-mode: forwards;
   animation-duration: 0.5s;
 }
 
-.slideOutRight {
+.slideOut {
+  right: 0;
   animation-name: SlideOutRight;
   animation-fill-mode: forwards;
   animation-duration: 0.5s;
 }
 
-.showTransparentOverlay {
+.transparentOverlay {
   position: absolute;
   background-color: black;
   opacity: 0.5;
-  width: 50%;
+  right: 0;
   left: 0;
+  width: 0;
   height: 100vh;
   z-index: 2;
 }
+
+.showTransparentOverlay {
+  width: 100%;
+}
+
 .hideTransparentOverlay {
-  position: absolute;
   width: 0;
-  left: 0;
-  height: 0;
-  z-index: 2;
 }
 
 @media only screen and (min-width: 768px) {
   .menu {
     width: 20%;
-  }
-  .transparentOverlay {
-    width: 80%;
   }
 }
 
